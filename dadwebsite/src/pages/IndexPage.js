@@ -1,0 +1,12 @@
+import React from 'react';
+import Navbar from '../components/navbar/Navbar';
+
+
+const IndexPage = () => {
+	console.log("Index being rendered");
+	return (
+		<h1>Index Page</h1>
+	)
+}
+
+export default IndexPage;
