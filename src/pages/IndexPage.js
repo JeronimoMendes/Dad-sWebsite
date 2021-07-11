@@ -1,9 +1,22 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import HeaderImage from "../assets/img/mainBgImg.jpg"
+
+const useStyles = makeStyles(theme => ({
+	bgImage: {
+		height: 800,
+		width: "100vw",
+		backgroundImage: "url(" + HeaderImage +")",
+		backgroundSize: "cover",
+		backgroundPosition: "center"
+	},
+}));
 
 const IndexPage = () => {
-	console.log("Index being rendered");
+	const classes = useStyles();
+
 	return (
-		<h1>Index Page</h1>
+		<div className={classes.bgImage} />
 	)
 }
 

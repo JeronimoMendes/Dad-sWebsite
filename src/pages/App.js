@@ -18,7 +18,7 @@ function App() {
 				<Navbar />
 			</Grid>
 			<Grid item>
-				<div style={{margin: 16}}>
+				<div>
 					<Router>
 						<Switch>
 							<Route exact path='/'>
