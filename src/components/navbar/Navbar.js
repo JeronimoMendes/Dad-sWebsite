@@ -25,7 +25,8 @@ const useStyles = makeStyles(theme => ({
 	navbar: {
 		backgroundColor: "white",
 		boxShadow: theme.shadows[0],
-		padding: 0
+		padding: 0,
+		height: 90
 	},
 	menu: {
 		[theme.breakpoints.down("sm")]: {
@@ -37,6 +38,12 @@ const useStyles = makeStyles(theme => ({
 		[theme.breakpoints.up("md")]: {
 			display: "none"
 		}
+	},
+	toolbar: {
+		height: 100
+	},
+	menuItems: {
+		fontSize: 18
 	}
 }))
 
@@ -49,11 +56,11 @@ const Navbar = () => {
 
 	return (
 		<AppBar position="static" className={classes.navbar}>
-			<Toolbar>
+			<Toolbar className={classes.toolbar}>
 				<IconButton edge="start" color="inherit" aria-label="menu" className={classes.menuButton}>
-				<BuildIcon />
+				<BuildIcon fontSize="large" />
 				</IconButton>
-				<Typography variant="h6" className={classes.title}>MJM Home Repairs</Typography>
+				<Typography variant="h4" className={classes.title}>MJM Home Repairs</Typography>
 				
 				<div className={classes.menu}>
 					<NavbarButton href="/" text="Home" />
@@ -95,9 +102,10 @@ const Navbar = () => {
 
 
 const NavbarButton = (props) => {
+	const classes = useStyles();
 	const color = (window.location.pathname === props.href) ? "orange" : "grey";
 
-	return <Button style={{color: color}} href={props.href}>{props.text}</Button>
+	return <Button className={classes.menuItems} style={{color: color}} href={props.href}>{props.text}</Button>
 }
 
 
