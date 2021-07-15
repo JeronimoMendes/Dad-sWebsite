@@ -40,7 +40,9 @@ const useStyles = makeStyles(theme => ({
 		}
 	},
 	toolbar: {
-		height: 100
+		height: 100,
+		marginRight: "10%",
+		marginLeft: "10%"
 	},
 	menuItems: {
 		fontSize: 18
@@ -52,7 +54,6 @@ const Navbar = () => {
 	const classes = useStyles();
 	const [click, setClick] = useState(false);
 	const handleClick = () => {setClick(!click); console.log(click)};
-	const closeMobile = () => setClick(false);
 
 	return (
 		<AppBar position="static" className={classes.navbar}>
@@ -60,7 +61,7 @@ const Navbar = () => {
 				<IconButton edge="start" color="inherit" aria-label="menu" className={classes.menuButton}>
 				<BuildIcon fontSize="large" />
 				</IconButton>
-				<Typography variant="h4" className={classes.title}>MJM Home Repairs</Typography>
+				<Typography variant="h4" className={classes.title}>MJM Home Improvement</Typography>
 				
 				<div className={classes.menu}>
 					<NavbarButton href="/" text="Home" />

@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import IndexPage from "./IndexPage"
 import Navbar from "../components/navbar/Navbar"
+import Footer from "../components/footer/Footer"
 import {
 	Grid
 } from "@material-ui/core"
@@ -36,6 +37,9 @@ function App() {
 						</Switch>
 					</Router>
 				</div>
+			</Grid>
+			<Grid item>
+				<Footer />
 			</Grid>
 		</Grid>
 	);

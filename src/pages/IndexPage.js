@@ -9,7 +9,7 @@ import {
 const useStyles = makeStyles(theme => ({
 	bgImage: {
 		height: 800,
-		width: "100vw",
+		width: "100%",
 		backgroundImage: "url(" + HeaderImage +")",
 		backgroundSize: "cover",
 		backgroundPosition: "center",
@@ -23,13 +23,18 @@ const useStyles = makeStyles(theme => ({
 		color: "white",
 		position: "absolute",
 		zIndex: 50,
-		margin: 50,
-		top: "25%"
+		marginLeft: "11%",
+		top: "25%",
+		[theme.breakpoints.down("sm")]: {
+			marginLeft: "11%",
+			top: "0",
+			width: "60%"
+		}
 	},
 	HeaderContainer: {
 		position: "relative",
 		overflow:"hidden",
-		width: "100vw",
+		width: "100%",
 		height: "700px"
 	}
 }));
