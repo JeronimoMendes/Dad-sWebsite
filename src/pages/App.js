@@ -14,34 +14,34 @@ import {
 
 function App() {
 	return (
-		<Grid>
-			<Grid item>
-				<Navbar />
+		<div style={{ boxSizing: "border-box" }}>
+			<Grid>
+				<Grid item>
+					<Navbar />
+				</Grid>
+				<Grid item>
+					<div>
+						<Router>
+							<Switch>
+								<Route exact path='/'>
+									<IndexPage />
+								</Route>
+								<Route exact path='/services'>
+									<h1>Services</h1>
+								</Route>
+								<Route exact path='/about-us'>
+									<h1>About us</h1>
+								</Route>
+								<Route exact path='/contact'>
+									<h1>Contact</h1>
+								</Route>
+							</Switch>
+						</Router>
+					</div>
+				</Grid>
 			</Grid>
-			<Grid item>
-				<div>
-					<Router>
-						<Switch>
-							<Route exact path='/'>
-								<IndexPage />
-							</Route>
-							<Route exact path='/services'>
-								<h1>Services</h1>
-							</Route>
-							<Route exact path='/about-us'>
-								<h1>About us</h1>
-							</Route>
-							<Route exact path='/contact'>
-								<h1>Contact</h1>
-							</Route>
-						</Switch>
-					</Router>
-				</div>
-			</Grid>
-			<Grid item>
-				<Footer />
-			</Grid>
-		</Grid>
+			<Footer />
+		</div>
 	);
 }
 
